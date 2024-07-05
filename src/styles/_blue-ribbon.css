@@ -1,0 +1,9 @@
+.blue-ribbon-right {
+  transform: translateX(20%);
+  transition: all ease-in-out 60s;
+}
+
+.blue-ribbon-left {
+  transform: translateX(-19%);
+  transition: all ease-in-out 60s;
+}

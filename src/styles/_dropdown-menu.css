@@ -1,0 +1,19 @@
+.dd-hidden {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.25rem;
+  opacity: 0;
+  transition: all 250ms;
+  z-index: 1;
+}
+
+.dd-visible {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  font-size: 1.25rem;
+  opacity: 1;
+  transition: all 250ms;
+  z-index: 1;
+}
