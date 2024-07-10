@@ -11,8 +11,13 @@ export const NavBar = () => {
       <div className="bg-black h-[4.5rem] w-full rounded-t-2xl flex items-center z-[2]">
         <LiraPartsLogo />
         <div className="flex items-center w-1/2">
-          {navbarLabels.map( (label, id) => (
-            <a key={id} className="selector text-white text-xl px-8 cursor-pointer">{label}</a>
+          {navbarLabels.map((label, id) => (
+            <a
+              key={id}
+              className="selector text-white text-xl px-8 cursor-pointer"
+            >
+              {label}
+            </a>
           ))}
         </div>
         <div

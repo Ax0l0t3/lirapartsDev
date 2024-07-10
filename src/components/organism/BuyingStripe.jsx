@@ -17,20 +17,18 @@ export const BuyingStripe = () => {
     {
       component: <MiniPackage />,
       description: "Elige el método de envío",
-    }
-  ]
+    },
+  ];
   return (
-    <div className="h-[29rem] bg-violet-900 p-4">
-      <GeneralInfoCard >
-        <div className="flex mt-auto mb-auto justify-between pt-4 text-[2rem]">
-          {
-            cardComponents.map( (element, id) => (
-              <div key={id} className="w-1/4">
-                {element.component}
-                <p>{element.description}</p>
-              </div>
-            ))
-          }
+    <div className="h-[29rem] bg-violet-900 p-4 font-[corbel]">
+      <GeneralInfoCard>
+        <div className="flex mt-auto mb-auto justify-between pt-4 text-[1.5rem]">
+          {cardComponents.map((element, id) => (
+            <div key={id} className="w-1/4">
+              {element.component}
+              <p>{element.description}</p>
+            </div>
+          ))}
         </div>
       </GeneralInfoCard>
     </div>

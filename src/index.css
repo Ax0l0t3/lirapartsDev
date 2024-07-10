@@ -3,11 +3,16 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: AgencyFB;
-  src: url("../public/fonts/AGENCYR.TTF");
+  font-family: Corbel;
+  src: url("../public/fonts/corbel.ttf");
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../public/fonts/Lato-Regular.ttf");
 }
 
 body {
-  font-family: AgencyFB;
+  font-family: Lato;
   font-size: 1rem;
 }

@@ -31,4 +31,4 @@ export const BoxTick = () => {
       </g>
     </svg>
   );
-}
+};

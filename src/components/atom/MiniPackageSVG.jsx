@@ -36,4 +36,4 @@ export const MiniPackage = () => {
       </g>
     </svg>
   );
-}
+};
