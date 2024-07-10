@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import LogosRibbonSVG from "../atom/LogosRibbonSVG";
+import LogosRibbonSVG from "../atom/SvgLogosRibbon";
 import "../../styles/_blue-ribbon.css";
 
 export const BrandsRibbon = () => {

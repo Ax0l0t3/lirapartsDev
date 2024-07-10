@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { LiraPartsLogo } from "../atom/LiraPartsLogo";
+import { LiraPartsLogo } from "../atom/SvgLiraPartsLogo";
 import { DropDownMenu } from "../molecule/DropDownMenu";
 import "../../styles/_navbar-selector.css";
 

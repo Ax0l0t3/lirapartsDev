@@ -1,8 +1,9 @@
-import { FaceLogoSVG } from "../atom/FbLogoSVG";
+import { FaceLogoSVG } from "../atom/SvgFbLogo";
+import { SvgInstaLogo } from "../atom/SvgInstaLogo";
 
 const Footer = () => {
   return (
-    <div className="h-80 bg-black text-white flex justify-center p-[2.4%] text-[1.25rem]">
+    <div className="h-fit bg-black text-white flex justify-start p-[2.4%] text-[1.25rem]">
       <div className="flex flex-col mr-[2.5%]">
         <p className="mb-8">Nuestra Empresa</p>
         <a>Nosotros</a>
@@ -15,9 +16,9 @@ const Footer = () => {
         <a>Rastrear Pedidos</a>
         <a>Historial de Pedidos</a>
       </div>
-      <div className="ml-[2.5%]">
+      <div className="ml-[2.5%] flex flex-wrap w-[9rem]">
         <FaceLogoSVG />
-        <img src="" alt="Instagram" />
+        <SvgInstaLogo />
         <p>котRooms®</p>
         <p>CasiTrajeados®</p>
       </div>

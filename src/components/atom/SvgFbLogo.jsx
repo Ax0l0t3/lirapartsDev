@@ -7,6 +7,7 @@ export const FaceLogoSVG = () => {
       version="1.1"
       id="svg509"
       xmlns="http://www.w3.org/2000/svg"
+      className="scale-75"
     >
       <defs id="defs506" />
       <g id="layer1">

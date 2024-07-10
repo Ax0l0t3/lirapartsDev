@@ -1,7 +1,7 @@
 import { GeneralInfoCard } from "../molecule/GeneralInfoCard";
-import { MouseMove } from "../atom/MouseMoveSVG";
-import { BoxTick } from "../atom/BoxTickSVG";
-import { MiniPackage } from "../atom/MiniPackageSVG";
+import { MouseMove } from "../atom/SvgMouseMove";
+import { BoxTick } from "../atom/SvgBoxTick";
+import { MiniPackage } from "../atom/SvgMiniPackage";
 
 export const BuyingStripe = () => {
   const cardComponents = [
