@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 
 export const GeneralInfoCard = ({ cardTitle = "Como Comprar", children }) => {
@@ -12,4 +11,5 @@ export const GeneralInfoCard = ({ cardTitle = "Como Comprar", children }) => {
 
 GeneralInfoCard.propTypes = {
   cardTitle: PropTypes.string,
+  children: PropTypes.node,
 };

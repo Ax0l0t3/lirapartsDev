@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import "../../styles/_square-card.css";
 
@@ -19,4 +18,5 @@ export const SquareCard = ({ cardTitle, imageName }) => {
 
 SquareCard.propTypes = {
   cardTitle: PropTypes.string,
+  imageName: PropTypes.string,
 };

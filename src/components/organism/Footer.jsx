@@ -1,4 +1,3 @@
-import React from "react";
 import { FaceLogoSVG } from "../atom/FbLogoSVG";
 
 const Footer = () => {

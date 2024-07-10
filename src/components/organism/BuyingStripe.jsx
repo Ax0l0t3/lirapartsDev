@@ -1,4 +1,3 @@
-import React from "react";
 import { GeneralInfoCard } from "../molecule/GeneralInfoCard";
 import { MouseMove } from "../atom/MouseMoveSVG";
 import { BoxTick } from "../atom/BoxTickSVG";
