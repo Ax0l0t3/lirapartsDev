@@ -34,7 +34,7 @@ export const BuyingStripe = () => {
           {cardComponents.map((element, id) => (
             <div key={id} className="my-4">
               {element.component}
-              <p className="w-[66%]">{element.description}</p>
+              <p className="w-[83%] lg:w-[66%]">{element.description}</p>
             </div>
           ))}
         </div>
