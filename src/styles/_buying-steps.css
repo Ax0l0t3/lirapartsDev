@@ -1,0 +1,5 @@
+.buying-table {
+  display: grid;
+  grid-template-columns: 61% 37%;
+  margin-left: 1rem;
+}

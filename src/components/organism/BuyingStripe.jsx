@@ -1,7 +1,11 @@
-import { GeneralInfoCard } from "../molecule/GeneralInfoCard";
+// Atoms
 import { MouseMove } from "../atom/SvgMouseMove";
 import { BoxTick } from "../atom/SvgBoxTick";
 import { MiniPackage } from "../atom/SvgMiniPackage";
+import { SvgCartIcon } from "../atom/SvgCartIcon";
+// Molecules
+import { GeneralInfoCard } from "../molecule/GeneralInfoCard";
+import "../../styles/_buying-steps.css";
 
 export const BuyingStripe = () => {
   const cardComponents = [
@@ -11,7 +15,12 @@ export const BuyingStripe = () => {
     },
     {
       component: <BoxTick />,
-      description: "Selecciona comprar",
+      description: "Selecciona comprar para añadirlas al carrito",
+    },
+    {
+      component: <SvgCartIcon />,
+      description:
+        "Revisa tus productos seleccionados en tu carrito de compras",
     },
     {
       component: <MiniPackage />,
@@ -19,13 +28,13 @@ export const BuyingStripe = () => {
     },
   ];
   return (
-    <div className="h-[29rem] bg-violet-900 p-4 font-[corbel]">
+    <div className="bg-violet-900 p-4 font-[corbel] flex justify-center">
       <GeneralInfoCard>
-        <div className="flex mt-auto mb-auto justify-between pt-4 text-[1.5rem]">
+        <div className="buying-table text-[1.5rem]">
           {cardComponents.map((element, id) => (
-            <div key={id} className="w-1/4">
+            <div key={id} className="my-4">
               {element.component}
-              <p>{element.description}</p>
+              <p className="w-[66%]">{element.description}</p>
             </div>
           ))}
         </div>
