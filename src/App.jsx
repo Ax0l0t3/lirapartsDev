@@ -1,11 +1,13 @@
-import "./App.css";
 // Organisms
 import { NavBar } from "./components/organism/NavBar";
 import { ProductsCards } from "./components/organism/ProductsCategories";
 import { BrandsRibbon } from "./components/organism/BrandsRibbon";
 import { BuyingStripe } from "./components/organism/BuyingStripe";
 import { SecurityBranding } from "./components/organism/SecurityBranding";
-import Footer from "./components/organism/Footer";
+import { Footer } from "./components/organism/Footer";
+
+// Styles
+import "./App.css";
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
       <BuyingStripe />
       <SecurityBranding />
       <Footer />
+      
     </>
   );
 }

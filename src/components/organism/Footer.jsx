@@ -1,7 +1,7 @@
 import { FaceLogoSVG } from "../atom/SvgFbLogo";
 import { SvgInstaLogo } from "../atom/SvgInstaLogo";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div className="h-fit bg-black text-white flex justify-start p-[2.4%] text-[1.25rem]">
       <div className="flex flex-col mr-[2.5%]">
@@ -25,5 +25,3 @@ const Footer = () => {
     </div>
   );
 };
-
-export default Footer;
