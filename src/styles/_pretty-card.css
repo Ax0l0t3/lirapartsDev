@@ -1,0 +1,28 @@
+.main-div {
+  align-items: center;
+  background-color: #ecececff;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  width: 50%;
+}
+
+.header-div {
+  background-color: #53b2f5ff;
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: 0 4px 5px #355871ff;
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem 0 0.25rem 0;
+  width: 100%;
+}
+
+.footer-div {
+  background-color: #53b2f5ff;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 -4px 5px #355871ff;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

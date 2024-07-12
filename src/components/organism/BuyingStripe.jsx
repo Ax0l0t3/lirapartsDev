@@ -4,7 +4,7 @@ import { BoxTick } from "../atom/SvgBoxTick";
 import { MiniPackage } from "../atom/SvgMiniPackage";
 import { SvgCartIcon } from "../atom/SvgCartIcon";
 // Molecules
-import { GeneralInfoCard } from "../molecule/GeneralInfoCard";
+import { SimpleCard } from "../molecule/SimpleCard";
 import "../../styles/_buying-steps.css";
 
 export const BuyingStripe = () => {
@@ -29,7 +29,7 @@ export const BuyingStripe = () => {
   ];
   return (
     <div className="bg-violet-900 p-4 font-[corbel] flex justify-center">
-      <GeneralInfoCard>
+      <SimpleCard>
         <div className="buying-table text-[1.5rem]">
           {cardComponents.map((element, id) => (
             <div key={id} className="my-4">
@@ -38,7 +38,7 @@ export const BuyingStripe = () => {
             </div>
           ))}
         </div>
-      </GeneralInfoCard>
+      </SimpleCard>
     </div>
   );
 };

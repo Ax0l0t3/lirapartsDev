@@ -1,6 +1,5 @@
 .portal-style {
-  background-color: black;
-  opacity: 0.9;
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   width: 100vw;
   height: 100vh;

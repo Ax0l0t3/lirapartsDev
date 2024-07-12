@@ -2,8 +2,34 @@ import { useState } from "react";
 import { createPortal } from "react-dom";
 import { SquareCard } from "../atom/SquareCard";
 import { DemoDialog } from "./DemoDialog";
+import { KotRoomsIcon } from "../atom/SvgKotRoomsIcon";
+
 export const ProductsCards = () => {
   const [modalState, setModalState] = useState(false);
+  const returnDemoHeader = () => <KotRoomsIcon />;
+  const returnDemoBody = () => (
+    <p className="m-8">
+      Felicidades!
+      <br />
+      Esta página es una demostración con interacciones limitadas y diseños
+      prestablecidos.
+      <br />
+      Para adquirir una experiencia completa que cumpla sus necesidades
+      comunicarse al correo arrinoyo@hotmail.com y pondremos nuestros servicios
+      a su disposición.
+    </p>
+  );
+  const returnDemoFooter = () => (
+    <div className="flex flex-wrap text-white">
+      <p>котRooms®</p>
+      <p>CasiTrajeados®</p>
+    </div>
+  );
+  const prettyCardContent = {
+    header: returnDemoHeader(),
+    body: returnDemoBody(),
+    footer: returnDemoFooter(),
+  };
   const productCategories = [
     {
       cardTitle: "Cabeza",
@@ -45,7 +71,13 @@ export const ProductsCards = () => {
         ))}
       </div>
       {modalState &&
-        createPortal(<DemoDialog />, document.getElementById("root"))}
+        createPortal(
+          <DemoDialog
+            handleClick={() => setModalState(false)}
+            cardContent={prettyCardContent}
+          />,
+          document.getElementById("root"),
+        )}
     </div>
   );
 };
