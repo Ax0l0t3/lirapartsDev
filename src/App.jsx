@@ -18,7 +18,6 @@ function App() {
       <BuyingStripe />
       <SecurityBranding />
       <Footer />
-      
     </>
   );
 }

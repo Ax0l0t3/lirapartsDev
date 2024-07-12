@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import LogosRibbonSVG from "../atom/SvgLogosRibbon";
 import "../../styles/_blue-ribbon.css";
+// Con una clase template static para after hacerle el cambio
 
 export const BrandsRibbon = () => {
   const [animate, setAnimate] = useState(false);

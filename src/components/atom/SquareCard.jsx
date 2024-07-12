@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
-import { DemoDialog } from "../organism/DemoDialog";
 import "../../styles/_square-card.css";
 
-export const SquareCard = ({ cardTitle, imageName }) => {
-  const [modalState, setModalState] = useState(false);
+export const SquareCard = ({
+  cardTitle,
+  clickHandle = Function.prototype,
+  imageName,
+}) => {
   return (
     <div className="text-3xl flex flex-col justify-center items-center">
-      <button type="button" className="card" onClick={() => setModalState(!modalState)}>
+      <button type="button" className="card" onClick={clickHandle}>
         <img
           className="for-shadow"
           src={`./images/${imageName}`}
@@ -16,12 +16,12 @@ export const SquareCard = ({ cardTitle, imageName }) => {
         />
       </button>
       <p>{cardTitle}</p>
-      {modalState && createPortal(<DemoDialog />, document.getElementById('root'))}
     </div>
   );
 };
 
 SquareCard.propTypes = {
   cardTitle: PropTypes.string,
+  clickHandle: PropTypes.func,
   imageName: PropTypes.string,
 };
