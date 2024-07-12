@@ -3,9 +3,11 @@ import { createPortal } from "react-dom";
 import { SquareCard } from "../atom/SquareCard";
 import { DemoDialog } from "./DemoDialog";
 import { KotRoomsIcon } from "../atom/SvgKotRoomsIcon";
+import "../../styles/_products-bg.css";
 
 export const ProductsCards = () => {
   const [modalState, setModalState] = useState(false);
+  // Demo Content
   const returnDemoHeader = () => <KotRoomsIcon />;
   const returnDemoBody = () => (
     <p className="m-8">
@@ -20,16 +22,18 @@ export const ProductsCards = () => {
     </p>
   );
   const returnDemoFooter = () => (
-    <div className="flex flex-wrap text-white">
-      <p>котRooms®</p>
-      <p>CasiTrajeados®</p>
+    <div className="flex flex-wrap text-white divide-x">
+      <p className="px-2">котRooms®</p>
+      <p className="px-2">CasiTrajeados®</p>
     </div>
   );
+  // Return Demo Content
   const prettyCardContent = {
     header: returnDemoHeader(),
     body: returnDemoBody(),
     footer: returnDemoFooter(),
   };
+  // Product Categories
   const productCategories = [
     {
       cardTitle: "Cabeza",
@@ -58,7 +62,7 @@ export const ProductsCards = () => {
   ];
   const handleCardClick = () => setModalState(!modalState);
   return (
-    <div className="flex items-center flex-col py-4 font-[corbel]">
+    <div className="products-bg flex items-center flex-col py-4 font-[corbel]">
       <h1 className="text-7xl">Productos</h1>
       <div className="flex flex-wrap justify-center">
         {productCategories.map((category, id) => (

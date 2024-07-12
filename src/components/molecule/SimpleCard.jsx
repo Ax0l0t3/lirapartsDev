@@ -1,8 +1,12 @@
 import PropTypes from "prop-types";
 
-export const SimpleCard = ({ cardTitle = "Como Comprar", children }) => {
+export const SimpleCard = ({
+  bgClassName,
+  cardTitle = "Como Comprar",
+  children,
+}) => {
   return (
-    <div className="p-9 w-content bg-[#ecececff] rounded-3xl flex flex-col opacity-100">
+    <div className={`p-9 w-content ${bgClassName} rounded-3xl flex flex-col`}>
       <h1 className="text-5xl">{cardTitle}</h1>
       {children}
     </div>
@@ -10,6 +14,7 @@ export const SimpleCard = ({ cardTitle = "Como Comprar", children }) => {
 };
 
 SimpleCard.propTypes = {
+  bgClassName: PropTypes.string,
   cardTitle: PropTypes.string,
   children: PropTypes.node,
 };

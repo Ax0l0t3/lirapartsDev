@@ -7,14 +7,13 @@ export const SquareCard = ({
   imageName,
 }) => {
   return (
-    <div className="text-3xl flex flex-col justify-center items-center">
-      <button type="button" className="card" onClick={clickHandle}>
-        <img
-          className="for-shadow"
-          src={`./images/${imageName}`}
-          alt={cardTitle}
-        />
-      </button>
+    <div className="text-3xl flex flex-col justify-center items-center rounded-lg">
+      <button
+        type="button"
+        style={{ backgroundImage: `url(./images/${imageName})` }}
+        className="card"
+        onClick={clickHandle}
+      ></button>
       <p>{cardTitle}</p>
     </div>
   );

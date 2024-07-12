@@ -25,7 +25,7 @@ export const NavBar = () => {
         </div>
         <div
           className="h-20 w-20 bg-sky-200 hover:bg-sky-700 cursor-pointer rounded-full ml-auto z-[5]"
-          onClick={() => setIsDdl(true)}
+          onClick={() => setIsDdl(!isDdl)}
         />
       </div>
       <DropDownMenu

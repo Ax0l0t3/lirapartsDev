@@ -1,3 +1,8 @@
+.steps-bg {
+  background-image: url("./images/bg004.jpg");
+  background-position: center;
+  background-size: 100%;
+}
 .buying-table {
   display: grid;
   grid-template-columns: 61% 37%;

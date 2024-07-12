@@ -20,8 +20,3 @@
   scale: 0.99;
   transition: all ease-in-out 100ms;
 }
-
-.for-shadow:active {
-  position: relative;
-  z-index: -1;
-}
