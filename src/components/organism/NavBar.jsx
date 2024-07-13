@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { LiraPartsLogo } from "../atom/SvgLiraPartsLogo";
 import { DropDownMenu } from "../molecule/DropDownMenu";
+import { DemoDialogContent } from "../../utils/DemoDialogContent";
 import "../../styles/_navbar-selector.css";
 
 export const NavBar = () => {
   const [isDdl, setIsDdl] = useState(false);
+  const [modalState, setModalState] = useState(false);
   const navbarLabels = ["Inicio", "Nosotros", "Contacto"];
   return (
     <div
@@ -18,6 +20,7 @@ export const NavBar = () => {
             <a
               key={id}
               className="selector text-white text-xl px-8 cursor-pointer"
+              onClick={() => setModalState(!modalState)}
             >
               {label}
             </a>
@@ -31,6 +34,10 @@ export const NavBar = () => {
       <DropDownMenu
         isVisible={isDdl}
         entryOptions={["Iniciar Sesión", "Crear Cuenta"]}
+      />
+      <DemoDialogContent
+        state={modalState}
+        setState={() => setModalState(false)}
       />
     </div>
   );
