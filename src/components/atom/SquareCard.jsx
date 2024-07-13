@@ -10,7 +10,7 @@ export const SquareCard = ({
     <div className="text-3xl flex flex-col justify-center items-center rounded-lg">
       <button
         type="button"
-        style={{ backgroundImage: `url(./images/${imageName})` }}
+        style={{ backgroundImage: `url("./images/${imageName}")` }}
         className="card"
         onClick={clickHandle}
       ></button>
