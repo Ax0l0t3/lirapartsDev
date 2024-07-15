@@ -6,7 +6,7 @@ export const DropDownEntry = ({
 }) => {
   return (
     <div
-      className="bg-black hover:bg-slate-800 text-white border-y-[1px] flex justify-center items-center border-white"
+      className="bg-black hover:bg-[#12142dff] text-white border-y-[1px] flex justify-center items-center border-white"
       onClick={entryClick}
     >
       <p className="mx-12 my-4">{optionText}</p>

@@ -32,7 +32,7 @@ export const BuyingStripe = () => {
       style={{ backgroundImage: `url("./images/pedalForBg.png")` }}
       className="steps-bg p-4 font-[corbel] flex justify-center"
     >
-      <SimpleCard bgClassName="bg-[#ececece5]">
+      <SimpleCard bgClassName="bg-[#e9e9ffe5]">
         <div className="buying-table text-[1.5rem]">
           {cardComponents.map((element, id) => (
             <div key={id} className="my-4">

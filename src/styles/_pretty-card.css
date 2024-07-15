@@ -9,9 +9,9 @@
 }
 
 .header-div {
-  background-color: #53b2f5ff;
+  background-color: #873b1fff;
   border-radius: 0.5rem 0.5rem 0 0;
-  box-shadow: 0 4px 5px #355871ff;
+  box-shadow: 0 4px 5px #1c2f33ff;
   display: flex;
   justify-content: center;
   padding: 0.25rem 0 0.25rem 0;
@@ -19,9 +19,9 @@
 }
 
 .footer-div {
-  background-color: #53b2f5ff;
+  background-color: #873b1fff;
   border-radius: 0 0 0.5rem 0.5rem;
-  box-shadow: 0 -4px 5px #355871ff;
+  box-shadow: 0 -4px 5px #1c2f33ff;
   display: flex;
   justify-content: center;
   width: 100%;

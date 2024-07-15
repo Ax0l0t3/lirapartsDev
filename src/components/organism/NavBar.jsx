@@ -10,7 +10,7 @@ export const NavBar = () => {
   const navbarLabels = ["Inicio", "Nosotros", "Contacto"];
   return (
     <div
-      className="bg-[#53b2f5ff] h-20 w-full flex items-end"
+      className="bg-[#873b1fff] h-20 w-full flex items-end"
       onMouseLeave={() => setIsDdl(false)}
     >
       <div className="bg-black h-[4.5rem] w-full rounded-t-2xl flex items-center z-[2]">
@@ -19,7 +19,7 @@ export const NavBar = () => {
           {navbarLabels.map((label, id) => (
             <a
               key={id}
-              className="selector text-white text-xl px-8 cursor-pointer"
+              className="selector text-white text-xl px-8 cursor-pointer active:text-[#2e99ceff]"
               onClick={() => setModalState(!modalState)}
             >
               {label}
@@ -27,7 +27,7 @@ export const NavBar = () => {
           ))}
         </div>
         <div
-          className="h-20 w-20 bg-sky-200 hover:bg-sky-700 cursor-pointer rounded-full ml-auto z-[5]"
+          className="h-20 w-20 bg-[#2e99ceff] hover:bg-sky-700 cursor-pointer rounded-full ml-auto z-[5]"
           onClick={() => setIsDdl(!isDdl)}
         />
       </div>

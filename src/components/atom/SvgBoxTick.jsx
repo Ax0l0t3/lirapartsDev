@@ -2,10 +2,10 @@ export const BoxTick = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="46"
-      height="46"
+      width="52"
+      height="52"
       version="1.1"
-      viewBox="0 0 12.171 12.171"
+      viewBox="0 0 13.758 13.758"
     >
       <g
         fillOpacity="1"
@@ -16,15 +16,15 @@ export const BoxTick = () => {
       >
         <path
           fill="none"
-          stroke="#53b2f5"
-          strokeWidth="0.473"
-          d="M.369 4.244v7.098h7.098V4.244H.37z"
+          stroke="#873b1f"
+          strokeWidth="0.513"
+          d="M.684 4.884v7.692h7.692V4.884z"
         ></path>
         <path
-          fill="#53b2f5"
+          fill="#873b1f"
           stroke="none"
-          strokeWidth="0.16"
-          d="M1.954 6.334l1.916 4.17s4.04-5.399 8.169-7.096a71.947 71.947 0 00-.305-2.816c-5.536 4.382-7.692 7.34-7.692 7.34l-.585-2.657z"
+          strokeWidth="0.174"
+          d="M2.402 7.148l2.076 4.519s4.379-5.85 8.853-7.689A77.96 77.96 0 0013 .926C7 5.675 4.664 8.88 4.664 8.88L4.031 6z"
         ></path>
       </g>
     </svg>

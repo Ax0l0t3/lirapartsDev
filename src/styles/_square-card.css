@@ -1,22 +1,26 @@
 .card {
-  margin: 2.5rem;
-  height: 15rem;
-  width: 15rem;
-  border: solid #f54c51;
-  border-width: 0 1px 1px 0;
+  border: solid #12142dff;
   border-radius: 10px;
-  box-shadow: 3px 3px 6px #ccccccff;
+  box-shadow: 3px 3px 3px #12142dff;
+  border-width: 0 1px 1px 0;
+  height: 15rem;
+  margin: 2.5rem;
   transition: all ease-in-out 100ms;
+  width: 15rem;
 }
 
 .card:hover {
+  border: solid #ea9679ff;
+  border-radius: 10px;
   box-shadow: 3px 3px 3px #ea9679ff;
+  border-width: 0 1px 1px 0;
 }
 
 .card:active {
-  border: solid #f54c51;
-  border-width: 1px 0 0 1px;
+  border: solid #ccccccff;
+  border-radius: 10px;
   box-shadow: inset 3px 3px 3px #ccccccff;
+  border-width: 1px 0 0 1px;
   scale: 0.99;
   transition: all ease-in-out 100ms;
 }

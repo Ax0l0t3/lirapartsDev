@@ -2,10 +2,10 @@ export const MiniPackage = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="46"
-      height="46"
+      width="52"
+      height="52"
       version="1.1"
-      viewBox="0 0 12.171 12.171"
+      viewBox="0 0 13.758 13.758"
     >
       <g
         fillOpacity="1"
@@ -14,19 +14,19 @@ export const MiniPackage = () => {
         strokeLinecap="round"
         strokeLinejoin="bevel"
         strokeOpacity="1"
-        strokeWidth="0.248"
+        strokeWidth="0.286"
       >
         <path
-          fill="#b5daf5"
-          d="M3.11.93L.131 6.085h5.953L9.061.931h.001z"
+          fill="#df8361"
+          d="M3.442.926L.005 6.879H6.88L10.315.928l.001-.001z"
         ></path>
         <path
-          fill="#82c6f5"
-          d="M6.085 6.085l2.977 5.156H3.109L.133 6.087v-.001z"
+          fill="#c4562d"
+          d="M6.879 6.88l3.437 5.952H3.442L.006 6.881V6.88z"
         ></path>
         <path
-          fill="#53b2f5"
-          d="M12.039 6.085l-2.977 5.156-2.977-5.156L9.061.931h.001z"
+          fill="#873b1f"
+          d="M13.753 6.879l-3.437 5.953-3.437-5.953L10.315.928l.001-.001z"
         ></path>
       </g>
     </svg>
