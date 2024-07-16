@@ -4,7 +4,11 @@ import { DropDownEntry } from "../atom/DdlEntry";
 import { DemoDialogContent } from "../../utils/DemoDialogContent";
 import "../../styles/_dropdown-menu.css";
 
-export const DropDownMenu = ({ entryOptions, isVisible }) => {
+export const DropDownMenu = ({
+  entryOptions,
+  isVisible,
+  setVisibility = Function.prototype,
+}) => {
   const [modalState, setModalState] = useState(false);
   return (
     <div className={isVisible ? "dd-visible" : "dd-hidden"}>
@@ -12,7 +16,10 @@ export const DropDownMenu = ({ entryOptions, isVisible }) => {
         <DropDownEntry
           key={id}
           optionText={entry}
-          entryClick={() => setModalState(!modalState)}
+          entryClick={() => {
+            setModalState(!modalState);
+            setVisibility(!isVisible);
+          }}
         />
       ))}
       <DemoDialogContent
@@ -26,4 +33,5 @@ export const DropDownMenu = ({ entryOptions, isVisible }) => {
 DropDownMenu.propTypes = {
   entryOptions: PropTypes.arrayOf(PropTypes.string),
   isVisible: PropTypes.bool,
+  setVisibility: PropTypes.func,
 };

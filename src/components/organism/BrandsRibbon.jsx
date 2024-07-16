@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import LogosRibbonSVG from "../atom/SvgLogosRibbon";
 import "../../styles/_blue-ribbon.css";
 
@@ -8,12 +8,15 @@ export const BrandsRibbon = () => {
     <div
       id="id-01"
       className="h-[11.5rem] w-full bg-[#7c2021ff] overflow-hidden flex items-center justify-center flex-col"
+    >
+      <div
+        className={`flex my-4 blue-ribbon-${animate ? "up" : "down"}`}
+        onAnimationEnd={() => setAnimate(!animate)}
       >
-      <div className={`flex my-4 blue-ribbon-${animate ? "up" : "down"}`} onAnimationEnd={()=> setAnimate(!animate)}>
         <LogosRibbonSVG />
         <LogosRibbonSVG />
       </div>
-      <div className={`flex my-4 blue-ribbon-${animate ? "down" : "up"}`} >
+      <div className={`flex my-4 blue-ribbon-${animate ? "down" : "up"}`}>
         <LogosRibbonSVG />
         <LogosRibbonSVG />
       </div>

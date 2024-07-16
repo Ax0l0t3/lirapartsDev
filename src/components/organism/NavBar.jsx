@@ -34,6 +34,7 @@ export const NavBar = () => {
       <DropDownMenu
         isVisible={isDdl}
         entryOptions={["Iniciar Sesión", "Crear Cuenta"]}
+        setVisibility={setIsDdl}
       />
       <DemoDialogContent
         state={modalState}
