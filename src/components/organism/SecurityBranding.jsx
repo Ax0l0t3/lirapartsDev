@@ -9,19 +9,30 @@ export const SecurityBranding = () => {
       text: "Compras seguras con cualquier método de pago",
     },
     {
-      imageName: "fedex.png",
+      imageName: "fedexLogo.png",
       text: "Envíos a toda la república en menos de 48 hrs",
     },
   ];
+  const divContent = [
+    {content:  <img className="scale-90 lg:scale-100" src="./images/fedexLogo.png" />},
+    {content:  <img src="./images/mystore.png" />},
+    {content:  <img src="./images/secure.png" />},
+    {content:
+      <p>
+        Sitio seguro encriptado con SiteLock<br/>
+        Aceptamos cualquier forma de pago<br/>
+        Enviamos el paquete el mismo día
+      </p>
+    }
+  ]
   return (
-    <div className="w-full h-[10.75rem] flex justify-around font-[corbel]">
-      {contentCreator.map((component, id) => (
+    <div className="w-full flex justify-around font-[corbel]">
+      {divContent.map((component, id) => (
         <div
           key={id}
-          className="flex flex-wrap flex-col items-center justify-center text-[1.25rem]"
+          className="lg:text-[1.3rem] my-4"
         >
-          <img className="h-fit" src={`./images/${component.imageName}`} />
-          <p>{component.text}</p>
+          {component.content}
         </div>
       ))}
     </div>

@@ -1,9 +1,32 @@
-.blue-ribbon-right {
-  transform: translateX(20%);
-  transition: all ease-in-out 60s;
+.blue-ribbon-up {
+  position: relative;
+  animation: myAnimation01 60s ease-in-out;
 }
 
-.blue-ribbon-left {
-  transform: translateX(-19%);
-  transition: all ease-in-out 60s;
+.blue-ribbon-down {
+  position: relative;
+  animation: myAnimation02 60s ease-in-out;
+}
+
+@keyframes myAnimation01 {
+  0%{
+    transform: translateX(0%);
+  }
+  50%{
+    transform: translateX(-25%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes myAnimation02 {
+  0%{
+    transform: translateX(0%);
+  }
+  50%{
+    transform: translateX(21%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
 }
