@@ -14,23 +14,51 @@ export const BuyingStripe = () => {
     const minutes = String(startDate.getMinutes()).padStart(2, "0");
     return `${hours}:${minutes}`;
   };
-  const cardComponents = [
+  const msgContent = [
     {
+      type: "answer",
+      description: "Escanea el código QR y resolveremos todas tus dudas"
+    },
+    {
+      type: "question",
+      description: "¿Cómo puedo comprar?"
+    },
+    {
+      type: "answer",
       component: <MouseMove />,
       description: "Elije las partes o refacciones que necesites",
     },
     {
+      type: "answer",
       component: <BoxTick />,
       description: "Selecciona comprar para añadirlas al carrito",
     },
     {
+      type: "answer",
       component: <SvgCartIcon />,
       description:
-        "Revisa tus productos seleccionados en tu carrito de compras",
+      "Revisa todos tus productos seleccionados en tu carrito de compras",
     },
     {
+      type: "answer",
       component: <MiniPackage />,
-      description: "Elige el método de envío",
+      description: "Selecciona el método de pago y listo!",
+    },
+    {
+      type: "question",
+      description: "¿Qué formas de pago aceptan?"
+    },
+    {
+      type: "answer",
+      description: "Todas las tarjetas son bienvenidas vía PayPal,  depósitos en Oxxo y transferencias interbancarias"
+    },
+    {
+      type: "question",
+      description: "¿Envían a todo México?"
+    },
+    {
+      type: "answer",
+      description: "Envíos el mismo día por FedEx y en menos de 48 horas está en tu puerta"
     },
   ];
   return (
@@ -38,51 +66,23 @@ export const BuyingStripe = () => {
       style={{ backgroundImage: `url("./images/pedalForBg.png")` }}
       className="steps-bg p-4 font-[corbel] flex justify-center overflow-visible"
     >
-      <SimpleCard bgClassName="bg-[#e9e9ffe5]">
-        <div className="mx-4 flex w-[48rem] lg:w-[70rem]">
-          {cardComponents.map((element, id) => (
-            <div key={id} className="my-4 flex">
-              {element.component}
-              <p className="w-[43%] lg:w-[66%]">{element.description}</p>
-            </div>
-          ))}
-        </div>
-        <div className="w-[108%] bg-[#12142dff] rounded-xl flex relative">
+        <div className="overflow-container">
           <img
-            className="mr-4 my-4 ml-[7%] scale-90 lg:scale-100"
+            className="m-4"
             src="./images/exampleQr.png"
             alt="example Qr image"
           />
-          <div className="msg-div flex flex-col justify-around">
-            <div className="msg-box-1 mx-4 lg:mx-8 lg:text-[1.1rem]">
-              <p className="mx-4">Cualquier cosa</p>
-              <p className="text-[0.6rem] mt-[0.6rem] mr-[0.4rem]">
-                {getMessageTime()}
-              </p>
-            </div>
-            <div className="msg-box-2 mx-4 lg:mx-8 lg:text-[1.1rem]">
-              <p className="mx-4">Estamos para servirte</p>
-              <p className="text-[0.6rem] mt-[0.6rem] mr-[0.4rem]">
-                {getMessageTime()}
-              </p>
-            </div>
-            <div className="msg-box-1 mx-4 lg:mx-8 lg:text-[1.1rem]">
-              <p className="mx-4">Inicia un chat con nosotros</p>
-              <p className="text-[0.6rem] mt-[0.6rem] mr-[0.4rem]">
-                {getMessageTime()}
-              </p>
-            </div>
-            <div className="msg-box-2 mx-4 lg:mx-8 lg:text-[1.1rem]">
-              <p className="mx-4">
-                Escanea el código QR y resolveremos tus dudas
-              </p>
-              <p className="text-[0.6rem] mt-[0.6rem] mr-[0.4rem]">
-                {getMessageTime()}
-              </p>
-            </div>
+          <div className="msg-div">
+            {msgContent.map( (content,id) => (
+              <div key={id} className={content.type === "answer" ? "msg-box-1" : "msg-box-2"}>
+                <p className="mx-4">{content.description}</p>
+                <p className="self-end text-[0.6rem] lg:text-[0.8rem] mt-[0.6rem] mr-[0.4rem]">
+                  {getMessageTime()}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-      </SimpleCard>
     </div>
   );
 };

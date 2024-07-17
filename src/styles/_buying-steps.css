@@ -4,13 +4,23 @@
   overflow-x: hidden;
 }
 
+.overflow-container {
+  width: fit-content;
+  background-color: #12142de6;
+  border-radius: 1rem;
+  display: flex;
+}
+
 .msg-div {
-  position: relative;
-  height: 104%;
-  border-radius: 10px;
-  margin: 1rem 7% 0 1rem;
-  width: 100%;
   background-image: radial-gradient(circle at top, #020414 1%, #020c05ff);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 134%;
+  justify-content: space-around;
+  margin: 1rem 1rem 0 0;
+  position: relative;
+  width: 100%;
 }
 
 .msg-box-1 {
@@ -19,6 +29,9 @@
   border-radius: 10px 10px 0 10px;
   color: white;
   display: flex;
+  margin: 0 1rem;
+  max-width: 78%;
+  width: fit-content;
 }
 
 .msg-box-2 {
@@ -26,5 +39,18 @@
   border-radius: 0 10px 10px 10px;
   color: white;
   display: flex;
+  margin: 0 1rem;
+  max-width: 78%;
   width: fit-content;
+}
+
+@media (min-width: 1028px){
+  .msg-box-1 {
+    font-size: 1.1rem;
+    margin: 0 2rem;
+  }
+  .msg-box-2 {
+    font-size: 1.1rem;
+    margin: 0 2rem;
+  }
 }
