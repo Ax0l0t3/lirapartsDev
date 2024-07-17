@@ -10,7 +10,7 @@ export const NavBar = () => {
   const navbarLabels = ["Inicio", "Nosotros", "Contacto"];
   return (
     <div
-      className="bg-[#873b1fff] h-20 w-full flex items-end"
+      className="bg-[#4b80c9ff] h-20 w-full flex items-end"
       onMouseLeave={() => setIsDdl(false)}
     >
       <div className="bg-black h-[4.5rem] w-full rounded-t-2xl flex items-center z-[2]">

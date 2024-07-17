@@ -6,8 +6,10 @@ export const SimpleCard = ({
   children,
 }) => {
   return (
-    <div className={`p-9 w-content ${bgClassName} rounded-3xl flex flex-col`}>
-      <h1 className="text-5xl">{cardTitle}</h1>
+    <div
+      className={`w-fit ${bgClassName} rounded-3xl flex flex-col items-center`}
+    >
+      <h1 className="mt-4 text-4xl">{cardTitle}</h1>
       {children}
     </div>
   );

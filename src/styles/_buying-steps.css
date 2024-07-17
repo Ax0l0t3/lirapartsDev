@@ -1,10 +1,30 @@
 .steps-bg {
   background-position: center;
   background-size: 100%;
+  overflow-x: hidden;
 }
 
-.buying-table {
-  display: grid;
-  grid-template-columns: 61% 37%;
-  margin-left: 1rem;
+.msg-div {
+  position: relative;
+  height: 104%;
+  border-radius: 10px;
+  margin: 1rem 7% 0 1rem;
+  width: 100%;
+  background-image: radial-gradient(circle at top, #020414 1%, #020c05ff);
+}
+
+.msg-box-1 {
+  align-self: end;
+  background-color: #2d121fff;
+  border-radius: 10px 10px 0 10px;
+  color: white;
+  display: flex;
+}
+
+.msg-box-2 {
+  background-color: #432e37ff;
+  border-radius: 0 10px 10px 10px;
+  color: white;
+  display: flex;
+  width: fit-content;
 }

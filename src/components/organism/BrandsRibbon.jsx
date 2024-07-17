@@ -7,7 +7,7 @@ export const BrandsRibbon = () => {
   return (
     <div
       id="id-01"
-      className="h-[11.5rem] w-full bg-[#7c2021ff] overflow-hidden flex items-center justify-center flex-col"
+      className="h-[11.5rem] w-full bg-[#4b80c9ff] overflow-hidden flex items-center justify-center flex-col"
     >
       <div
         className={`flex my-4 blue-ribbon-${animate ? "up" : "down"}`}
