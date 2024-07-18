@@ -7,25 +7,16 @@ export const SecurityBranding = () => {
     },
     { content: <img src="./images/mystore.png" /> },
     { content: <img src="./images/secure.png" /> },
-    {
-      content: (
-        <p>
-          Sitio seguro encriptado con SiteLock
-          <br />
-          Aceptamos cualquier forma de pago
-          <br />
-          Enviamos el paquete el mismo día
-        </p>
-      ),
-    },
   ];
   return (
-    <div className="w-full flex justify-around font-[corbel]">
-      {divContent.map((component, id) => (
-        <div key={id} className="lg:text-[1.3rem] my-4">
-          {component.content}
-        </div>
-      ))}
+    <div className="w-full pb-4">
+      <div className="flex flex-col items-center justify-around w-1/3">
+        {divContent.map((component, id) => (
+          <div key={id} className="mt-4">
+            {component.content}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

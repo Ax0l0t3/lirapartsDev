@@ -6,7 +6,7 @@ export const DemoDialogContent = ({ state, setState }) => {
   const dialogContent = {
     header: <KotRoomsIcon />,
     body: (
-      <p className="m-4 text-sm lg:m-8 lg:text-base">
+      <p className="m-4 text-justify text-sm lg:m-8 lg:text-[1.1rem]">
         Felicidades!
         <br />
         Esta página es una demostración con interacciones limitadas y diseños

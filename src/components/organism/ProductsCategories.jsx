@@ -34,22 +34,27 @@ export const ProductsCards = () => {
   ];
   const handleCardClick = () => setModalState(!modalState);
   return (
-    <div className="products-bg flex items-center flex-col py-4 font-[corbel]">
-      <h1 className="text-7xl">Productos</h1>
-      <div className="flex flex-wrap justify-center">
-        {productCategories.map((category, id) => (
-          <SquareCard
-            key={id}
-            cardTitle={category.cardTitle}
-            imageName={category.imgName}
-            clickHandle={handleCardClick}
-          />
-        ))}
+    <div
+      style={{ backgroundImage: `url("./images/repairGtr.jpg")` }}
+      className=" products-bg"
+    >
+      <div className="products-gradient flex items-center flex-col py-4 font-[corbel]">
+        <h1 className="text-7xl">Productos</h1>
+        <div className="flex flex-wrap justify-center">
+          {productCategories.map((category, id) => (
+            <SquareCard
+              key={id}
+              cardTitle={category.cardTitle}
+              imageName={category.imgName}
+              clickHandle={handleCardClick}
+            />
+          ))}
+        </div>
+        <DemoDialogContent
+          state={modalState}
+          setState={() => setModalState(false)}
+        />
       </div>
-      <DemoDialogContent
-        state={modalState}
-        setState={() => setModalState(false)}
-      />
     </div>
   );
 };

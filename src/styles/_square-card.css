@@ -19,7 +19,7 @@
 .card:active {
   border: solid #ccccccff;
   border-radius: 10px;
-  box-shadow: inset 3px 3px 3px #ccccccff;
+  box-shadow: inset 3px 3px 3px #808080ff;
   border-width: 1px 0 0 1px;
   scale: 0.99;
   transition: all ease-in-out 100ms;

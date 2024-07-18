@@ -3,7 +3,6 @@ import { NavBar } from "./components/organism/NavBar";
 import { ProductsCards } from "./components/organism/ProductsCategories";
 import { BrandsRibbon } from "./components/organism/BrandsRibbon";
 import { BuyingStripe } from "./components/organism/BuyingStripe";
-import { SecurityBranding } from "./components/organism/SecurityBranding";
 import { Footer } from "./components/organism/Footer";
 
 // Styles
@@ -16,7 +15,6 @@ function App() {
       <ProductsCards />
       <BrandsRibbon />
       <BuyingStripe />
-      <SecurityBranding />
       <Footer />
     </>
   );

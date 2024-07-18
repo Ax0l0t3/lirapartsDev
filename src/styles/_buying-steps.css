@@ -1,7 +1,17 @@
+.buying-image {
+  scale: 1;
+  margin-top: 1rem;
+  transition: all 250ms;
+}
+
+.buying-image:hover {
+  scale: 1.02;
+  transition: all 250ms;
+}
+
 .steps-bg {
-  background-position: center;
+  background-position: 0 43%;
   background-size: 100%;
-  overflow-x: hidden;
 }
 
 .overflow-container {
@@ -16,11 +26,10 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: 134%;
   justify-content: space-around;
-  margin: 1rem 1rem 0 0;
+  margin: 1rem 1rem 1rem 0;
   position: relative;
-  width: 100%;
+  width: fit-content;
 }
 
 .msg-box-1 {
@@ -32,6 +41,13 @@
   margin: 0 1rem;
   max-width: 78%;
   width: fit-content;
+  transition: all 2000ms ease;
+}
+
+.msg-box-1:hover {
+  background-color: #12142dff;
+  transform: translateX(-1%);
+  transition: all 100ms ease;
 }
 
 .msg-box-2 {
@@ -41,10 +57,17 @@
   display: flex;
   margin: 0 1rem;
   max-width: 78%;
+  transition: all 2000ms ease;
   width: fit-content;
 }
 
-@media (min-width: 1028px){
+.msg-box-2:hover {
+  background-color: #12142dff;
+  transform: translateX(1%);
+  transition: all 100ms ease;
+}
+
+@media (min-width: 1280px) {
   .msg-box-1 {
     font-size: 1.1rem;
     margin: 0 2rem;
