@@ -3,7 +3,7 @@ import { PrettyCard } from "../molecule/PrettyCard";
 import "../../styles/_portal-style.css";
 
 export const DemoDialog = ({
-  cardContent,
+  cardContent = { string: "string"},
   handleClick = Function.prototype,
 }) => {
   return (

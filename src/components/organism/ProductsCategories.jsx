@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { SquareCard } from "../atom/SquareCard";
-import { DemoDialogContent } from "../../utils/DemoDialogContent";
+import { PortalComponent } from "../../utils/PortalComponent";
 import "../../styles/_products-bg.css";
+import { DemoModalContent } from "../../utils/DemoModalContent";
 
 export const ProductsCards = () => {
   const [modalState, setModalState] = useState(false);
@@ -50,9 +51,10 @@ export const ProductsCards = () => {
             />
           ))}
         </div>
-        <DemoDialogContent
-          state={modalState}
-          setState={() => setModalState(false)}
+        <PortalComponent
+          isVisible={modalState}
+          setIsVisible={() => setModalState(false)}
+          portalChildren={<DemoModalContent />}
         />
       </div>
     </div>

@@ -1,9 +1,9 @@
-import { createPortal } from "react-dom";
+import React from 'react';
 import { KotRoomsIcon } from "../components/atom/SvgKotRoomsIcon";
-import { DemoDialog } from "../components/organism/DemoDialog";
+import { PrettyCard } from '../components/molecule/PrettyCard';
 
-export const DemoDialogContent = ({ state, setState }) => {
-  const dialogContent = {
+export const DemoModalContent = () => {
+  const demoContent = {
     header: <KotRoomsIcon />,
     body: (
       <p className="m-4 text-justify text-sm lg:m-8 lg:text-[1.1rem]">
@@ -23,15 +23,8 @@ export const DemoDialogContent = ({ state, setState }) => {
         <p className="px-2">CasiTrajeados®</p>
       </div>
     ),
-  };
+  }
   return (
-    state &&
-    createPortal(
-      <DemoDialog
-        handleClick={() => setState(!state)}
-        cardContent={dialogContent}
-      />,
-      document.getElementById("root"),
-    )
+    <PrettyCard cardTitle="Trial" content={demoContent} />
   );
 };

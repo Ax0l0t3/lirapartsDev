@@ -1,8 +1,9 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { DropDownEntry } from "../atom/DdlEntry";
-import { DemoDialogContent } from "../../utils/DemoDialogContent";
+import { PortalComponent } from "../../utils/PortalComponent";
 import "../../styles/_dropdown-menu.css";
+import { DemoModalContent } from "../../utils/DemoModalContent";
 
 export const DropDownMenu = ({
   entryOptions,
@@ -22,9 +23,10 @@ export const DropDownMenu = ({
           }}
         />
       ))}
-      <DemoDialogContent
-        state={modalState}
-        setState={() => setModalState(false)}
+      <PortalComponent
+        isVisible={modalState}
+        setIsVisible={() => setModalState(false)}
+        portalChildren={<DemoModalContent />}
       />
     </div>
   );

@@ -1,8 +1,17 @@
 import { useState } from "react";
+// Atoms
 import { LiraPartsLogo } from "../atom/SvgLiraPartsLogo";
+import { ManIcon } from "../atom/SVGManIcon";
+import { SearchIcon } from "../atom/SVGSearchIcon";
+// Molecules
+import { GeneralSearchBar } from "../molecule/GeneralSearchBar";
 import { DropDownMenu } from "../molecule/DropDownMenu";
-import { DemoDialogContent } from "../../utils/DemoDialogContent";
+// Utils
+import { PortalComponent } from "../../utils/PortalComponent";
+import { DemoModalContent } from "../../utils/DemoModalContent";
+// Styles
 import "../../styles/_navbar-selector.css";
+
 
 export const NavBar = () => {
   const [isDdl, setIsDdl] = useState(false);
@@ -26,20 +35,25 @@ export const NavBar = () => {
             </a>
           ))}
         </div>
+        <SearchIcon />
         <div
-          className="h-20 w-20 bg-[#2e99ceff] hover:bg-sky-700 cursor-pointer rounded-full ml-auto z-[5]"
+          className="h-20 w-20 bg-[#2e99ceff] hover:bg-sky-700 cursor-pointer rounded-full ml-4 z-[5] flex justify-center items-center overflow-hidden"
           onClick={() => setIsDdl(!isDdl)}
-        />
+        >
+          <ManIcon />
+        </div>
       </div>
       <DropDownMenu
         isVisible={isDdl}
         entryOptions={["Iniciar Sesión", "Crear Cuenta"]}
         setVisibility={setIsDdl}
       />
-      <DemoDialogContent
-        state={modalState}
-        setState={() => setModalState(false)}
+      <PortalComponent
+        isVisible={modalState}
+        setIsVisible={() => setModalState(false)}
+        portalChildren={<DemoModalContent />}
       />
+      {/* <GeneralSearchBar /> */}
     </div>
   );
 };
