@@ -15,6 +15,7 @@ import "../../styles/_navbar-selector.css";
 
 export const NavBar = () => {
   const [isDdl, setIsDdl] = useState(false);
+  const [searchBarState, setSearchBarState] = useState(false);
   const [modalState, setModalState] = useState(false);
   const navbarLabels = ["Inicio", "Nosotros", "Contacto"];
   return (
@@ -35,7 +36,9 @@ export const NavBar = () => {
             </a>
           ))}
         </div>
-        <SearchIcon />
+        <div className="ml-auto hover:scale-[0.9] transition-all" onClick={() => setSearchBarState(!searchBarState)}>
+          <SearchIcon />
+        </div>
         <div
           className="h-20 w-20 bg-[#2e99ceff] hover:bg-sky-700 cursor-pointer rounded-full ml-4 z-[5] flex justify-center items-center overflow-hidden"
           onClick={() => setIsDdl(!isDdl)}
@@ -53,7 +56,7 @@ export const NavBar = () => {
         setIsVisible={() => setModalState(false)}
         portalChildren={<DemoModalContent />}
       />
-      {/* <GeneralSearchBar /> */}
+    <GeneralSearchBar isVisible={searchBarState} setIsVisible={() => setSearchBarState(!searchBarState)}/>
     </div>
   );
 };

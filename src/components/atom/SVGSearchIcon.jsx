@@ -1,4 +1,4 @@
-export const SearchIcon = () => {
+export const SearchIcon = ({iconFill="#fff"}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,11 +6,10 @@ export const SearchIcon = () => {
       height="37"
       version="1.1"
       viewBox="0 0 15.081 15.081"
-      className="ml-auto hover:scale-[0.9] transition-all"
     >
       <g>
         <path
-          fill="#fff"
+          fill={iconFill}
           fillOpacity="1"
           stroke="none"
           strokeDasharray="none"

@@ -1,8 +1,11 @@
 import { useState } from "react";
+// Atoms
 import { SquareCard } from "../atom/SquareCard";
+// Utils
 import { PortalComponent } from "../../utils/PortalComponent";
-import "../../styles/_products-bg.css";
 import { DemoModalContent } from "../../utils/DemoModalContent";
+// Styles
+import "../../styles/_products-bg.css";
 
 export const ProductsCards = () => {
   const [modalState, setModalState] = useState(false);

@@ -1,8 +1,17 @@
 import React from 'react';
-import { DemoDialog } from '../organism/DemoDialog';
+import { PortalComponent } from '../../utils/PortalComponent';
+import { SearchBarContent } from '../../utils/SearchBarContent';
 
-export const GeneralSearchBar = () => {
+export const GeneralSearchBar = ({
+  isVisible,
+  setIsVisible = Function.prototype
+}) => {
   return (
-    <DemoDialog />
+    <PortalComponent
+      portalChildren={<SearchBarContent />}
+      isVisible={isVisible}
+      setIsVisible={setIsVisible}
+    />
+
   );
 };
