@@ -13,10 +13,6 @@ import { DemoModalContent } from "./utils/DemoModalContent";
 import { SearchBarContent } from "./utils/SearchBarContent";
 // Styles
 import "./App.css";
-// Added another tini tiny comment
-
-// Just a Comment
-// Here goes another tini tiny comment
 
 export const PortalContext = createContext(null);
 
