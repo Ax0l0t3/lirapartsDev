@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { DropDownEntry } from "../atom/DdlEntry";
-import { PortalComponent } from "../../utils/PortalComponent";
+import { PortalComponent } from "./PortalComponent";
 import "../../styles/_dropdown-menu.css";
 import { DemoModalContent } from "../../utils/DemoModalContent";
 

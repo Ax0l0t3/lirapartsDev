@@ -1,19 +1,20 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 // Atoms
 import { LiraPartsLogo } from "../atom/SvgLiraPartsLogo";
 import { ManIcon } from "../atom/SVGManIcon";
 import { SearchIcon } from "../atom/SVGSearchIcon";
 // Molecules
-import { GeneralSearchBar } from "../molecule/GeneralSearchBar";
+import { GeneralSearchBar } from "../organism/GeneralSearchBar";
 import { DropDownMenu } from "../molecule/DropDownMenu";
-// Utils
-import { PortalComponent } from "../../utils/PortalComponent";
-import { DemoModalContent } from "../../utils/DemoModalContent";
+// Organisms
+import { DemoDialog } from "../organism/DemoDialog";
 // Styles
 import "../../styles/_navbar-selector.css";
 
+export const PortalContext = createContext(null);
 
 export const NavBar = () => {
+  const [mouseInBlack, setMouseInBlack] = useState(false);
   const [isDdl, setIsDdl] = useState(false);
   const [searchBarState, setSearchBarState] = useState(false);
   const [modalState, setModalState] = useState(false);
@@ -51,12 +52,12 @@ export const NavBar = () => {
         entryOptions={["Iniciar Sesión", "Crear Cuenta"]}
         setVisibility={setIsDdl}
       />
-      <PortalComponent
-        isVisible={modalState}
-        setIsVisible={() => setModalState(false)}
-        portalChildren={<DemoModalContent />}
-      />
-    <GeneralSearchBar isVisible={searchBarState} setIsVisible={() => setSearchBarState(!searchBarState)}/>
+      <PortalContext.Provider value={setMouseInBlack}>
+        <DemoDialog isVisible={modalState} setIsVisible={() => mouseInBlack ? setModalState(!modalState) : null}/>
+      </PortalContext.Provider>
+      <PortalContext.Provider value={setMouseInBlack} >
+        <GeneralSearchBar isVisible={searchBarState} setIsVisible={() => mouseInBlack ? setSearchBarState(!searchBarState) : null}/>
+      </PortalContext.Provider>
     </div>
   );
 };

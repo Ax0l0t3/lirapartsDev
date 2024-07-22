@@ -25,6 +25,8 @@ export const DemoModalContent = () => {
     ),
   }
   return (
-    <PrettyCard cardTitle="Trial" content={demoContent} />
+    <div className='w-1/2' onMouseEnter={()=>console.log("Mouse out black")} onMouseLeave={()=>console.log("Mouse in black")}>
+      <PrettyCard cardTitle="Trial" content={demoContent} />
+    </div>
   );
 };

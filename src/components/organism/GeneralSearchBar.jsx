@@ -1,5 +1,5 @@
 import React from 'react';
-import { PortalComponent } from '../../utils/PortalComponent';
+import { PortalComponent } from '../molecule/PortalComponent';
 import { SearchBarContent } from '../../utils/SearchBarContent';
 
 export const GeneralSearchBar = ({

@@ -2,7 +2,7 @@ import { useState } from "react";
 // Atoms
 import { SquareCard } from "../atom/SquareCard";
 // Utils
-import { PortalComponent } from "../../utils/PortalComponent";
+import { PortalComponent } from "../molecule/PortalComponent";
 import { DemoModalContent } from "../../utils/DemoModalContent";
 // Styles
 import "../../styles/_products-bg.css";

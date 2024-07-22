@@ -1,19 +1,16 @@
-import PropTypes from "prop-types";
-import { PrettyCard } from "../molecule/PrettyCard";
+import { DemoModalContent } from "../../utils/DemoModalContent";
+import { PortalComponent } from "../molecule/PortalComponent";
 import "../../styles/_portal-style.css";
 
 export const DemoDialog = ({
-  cardContent = { string: "string"},
-  handleClick = Function.prototype,
+  isVisible,
+  setIsVisible = Function.prototype,
 }) => {
   return (
-    <div className="portal-style" onClick={handleClick}>
-      <PrettyCard cardTitle="Demo" content={cardContent} />
-    </div>
+    <PortalComponent
+        isVisible={isVisible}
+        setIsVisible={setIsVisible}
+        portalChildren={<DemoModalContent />}
+      />
   );
-};
-
-DemoDialog.propTypes = {
-  cardContent: PropTypes.object,
-  handleClick: PropTypes.func,
 };

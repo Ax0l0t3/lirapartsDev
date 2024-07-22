@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { SearchIcon } from '../components/atom/SVGSearchIcon';
 import "../styles/_search-bar-content.css";
 import { SimpleList } from '../components/molecule/SimpleList';
 import { ProductLi } from '../components/atom/ProductLi'
 import { CloseIcon } from '../components/atom/SVGCloseIcon';
+import { PortalContext } from '../components/ecosystem/NavBar';
 
 export const SearchBarContent = () => {
+  const setMouseInBlack = useContext(PortalContext);
   const productImages = [
     "./images/stone1.png",
     "./images/stone2.png",
@@ -18,7 +20,7 @@ export const SearchBarContent = () => {
   ]
 
   return (
-    <div className='search-container'>
+    <div className='search-container' onMouseEnter={()=>setMouseInBlack(false)} onMouseLeave={()=>setMouseInBlack(true)} >
       <div className='flex m-8 mb-4'>
         <p className="text-2xl">Busqueda</p>
         <div className='close-form h-fit'>
