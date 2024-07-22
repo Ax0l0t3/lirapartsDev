@@ -11,6 +11,7 @@ import "../styles/_search-bar-content.css";
 export const SearchBarContent = ({
   mouseEnter = Function.prototype,
   mouseLeave = Function.prototype,
+  portalClose = Function.prototype,
 }) => {
   const productImages = [
     "./images/stone1.png",
@@ -31,7 +32,7 @@ export const SearchBarContent = ({
     >
       <div className="flex m-8 mb-4">
         <p className="text-2xl">Busqueda</p>
-        <div className="close-form h-fit">
+        <div className="close-form h-fit" onClick={portalClose}>
           <CloseIcon />
         </div>
       </div>
@@ -60,4 +61,5 @@ export const SearchBarContent = ({
 SearchBarContent.propTypes = {
   mouseEnter: PropTypes.func.isRequired,
   mouseLeave: PropTypes.func.isRequired,
+  portalClose: PropTypes.func,
 };

@@ -34,6 +34,7 @@ function App() {
           <SearchBarContent
             mouseEnter={() => setMouseInContent(true)}
             mouseLeave={() => setMouseInContent(false)}
+            portalClose={() => setShowPortal(false)}
           />
         );
       default:
