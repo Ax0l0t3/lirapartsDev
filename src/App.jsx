@@ -15,6 +15,7 @@ import { SearchBarContent } from "./utils/SearchBarContent";
 import "./App.css";
 
 // Just a Comment
+// Here goes another tini tiny comment
 
 export const PortalContext = createContext(null);
 
