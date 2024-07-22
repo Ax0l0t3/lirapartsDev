@@ -1,10 +1,10 @@
-import React from 'react';
-import { PortalComponent } from '../molecule/PortalComponent';
-import { SearchBarContent } from '../../utils/SearchBarContent';
+import { PortalComponent } from "../molecule/PortalComponent";
+import { SearchBarContent } from "../../utils/SearchBarContent";
+import PropTypes from "prop-types";
 
 export const GeneralSearchBar = ({
   isVisible,
-  setIsVisible = Function.prototype
+  setIsVisible = Function.prototype,
 }) => {
   return (
     <PortalComponent
@@ -12,6 +12,10 @@ export const GeneralSearchBar = ({
       isVisible={isVisible}
       setIsVisible={setIsVisible}
     />
-
   );
+};
+
+GeneralSearchBar.propTypes = {
+  isVisible: PropTypes.bool.isRequired,
+  setIsVisible: PropTypes.func,
 };

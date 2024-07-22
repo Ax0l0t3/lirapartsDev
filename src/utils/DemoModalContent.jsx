@@ -1,8 +1,13 @@
-import React from 'react';
+import PropTypes from "prop-types";
+// Atoms
 import { KotRoomsIcon } from "../components/atom/SvgKotRoomsIcon";
-import { PrettyCard } from '../components/molecule/PrettyCard';
+// Molecule
+import { PrettyCard } from "../components/molecule/PrettyCard";
 
-export const DemoModalContent = () => {
+export const DemoModalContent = ({
+  mouseEnter = Function.prototype,
+  mouseLeave = Function.prototype,
+}) => {
   const demoContent = {
     header: <KotRoomsIcon />,
     body: (
@@ -23,10 +28,15 @@ export const DemoModalContent = () => {
         <p className="px-2">CasiTrajeados®</p>
       </div>
     ),
-  }
+  };
   return (
-    <div className='w-1/2' onMouseEnter={()=>console.log("Mouse out black")} onMouseLeave={()=>console.log("Mouse in black")}>
+    <div className="w-1/2" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
       <PrettyCard cardTitle="Trial" content={demoContent} />
     </div>
   );
+};
+
+DemoModalContent.propTypes = {
+  mouseEnter: PropTypes.func,
+  mouseLeave: PropTypes.func,
 };

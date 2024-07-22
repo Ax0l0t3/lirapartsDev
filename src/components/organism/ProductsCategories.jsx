@@ -1,14 +1,13 @@
-import { useState } from "react";
+import { useContext } from "react";
 // Atoms
 import { SquareCard } from "../atom/SquareCard";
 // Utils
-import { PortalComponent } from "../molecule/PortalComponent";
-import { DemoModalContent } from "../../utils/DemoModalContent";
+import { PortalContext } from "../../App";
 // Styles
 import "../../styles/_products-bg.css";
 
 export const ProductsCards = () => {
-  const [modalState, setModalState] = useState(false);
+  const { setShowPortal, setPortalContent } = useContext(PortalContext);
   // Product Categories
   const productCategories = [
     {
@@ -36,7 +35,10 @@ export const ProductsCards = () => {
       imgName: "ibanezKits.png",
     },
   ];
-  const handleCardClick = () => setModalState(!modalState);
+  const handleCardClick = () => {
+    setPortalContent("Demo");
+    setShowPortal(true);
+  };
   return (
     <div
       style={{ backgroundImage: `url("./images/repairGtr.jpg")` }}
@@ -54,11 +56,6 @@ export const ProductsCards = () => {
             />
           ))}
         </div>
-        <PortalComponent
-          isVisible={modalState}
-          setIsVisible={() => setModalState(false)}
-          portalChildren={<DemoModalContent />}
-        />
       </div>
     </div>
   );

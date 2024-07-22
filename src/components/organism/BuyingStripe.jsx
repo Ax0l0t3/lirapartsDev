@@ -3,7 +3,7 @@ import { MouseMove } from "../atom/SvgMouseMove";
 import { BoxTick } from "../atom/SvgBoxTick";
 import { MiniPackage } from "../atom/SvgMiniPackage";
 import { SvgCartIcon } from "../atom/SvgCartIcon";
-// Molecules
+// Styles
 import "../../styles/_buying-steps.css";
 
 export const BuyingStripe = () => {

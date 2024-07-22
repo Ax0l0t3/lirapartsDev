@@ -1,24 +1,28 @@
-import { createContext, useState } from "react";
+import { useState, useContext } from "react";
 // Atoms
 import { LiraPartsLogo } from "../atom/SvgLiraPartsLogo";
 import { ManIcon } from "../atom/SVGManIcon";
 import { SearchIcon } from "../atom/SVGSearchIcon";
 // Molecules
-import { GeneralSearchBar } from "../organism/GeneralSearchBar";
 import { DropDownMenu } from "../molecule/DropDownMenu";
-// Organisms
-import { DemoDialog } from "../organism/DemoDialog";
+// Utils
+import { PortalContext } from "../../App";
 // Styles
 import "../../styles/_navbar-selector.css";
 
-export const PortalContext = createContext(null);
-
 export const NavBar = () => {
-  const [mouseInBlack, setMouseInBlack] = useState(false);
-  const [isDdl, setIsDdl] = useState(false);
-  const [searchBarState, setSearchBarState] = useState(false);
-  const [modalState, setModalState] = useState(false);
+  const { setShowPortal, setPortalContent } = useContext(PortalContext);
   const navbarLabels = ["Inicio", "Nosotros", "Contacto"];
+  const [isDdl, setIsDdl] = useState(false);
+  const handleSearchClick = () => {
+    setPortalContent("Search");
+    setShowPortal(true);
+  };
+  const handleLinkClick = () => {
+    setPortalContent("Demo");
+    setShowPortal(true);
+  };
+
   return (
     <div
       className="bg-[#4b80c9ff] h-20 w-full flex items-end"
@@ -31,13 +35,16 @@ export const NavBar = () => {
             <a
               key={id}
               className="selector text-white text-xl px-8 cursor-pointer active:text-[#2e99ceff]"
-              onClick={() => setModalState(!modalState)}
+              onClick={handleLinkClick}
             >
               {label}
             </a>
           ))}
         </div>
-        <div className="ml-auto hover:scale-[0.9] transition-all" onClick={() => setSearchBarState(!searchBarState)}>
+        <div
+          className="ml-auto hover:scale-[0.9] transition-all"
+          onClick={handleSearchClick}
+        >
           <SearchIcon />
         </div>
         <div
@@ -52,12 +59,6 @@ export const NavBar = () => {
         entryOptions={["Iniciar Sesión", "Crear Cuenta"]}
         setVisibility={setIsDdl}
       />
-      <PortalContext.Provider value={setMouseInBlack}>
-        <DemoDialog isVisible={modalState} setIsVisible={() => mouseInBlack ? setModalState(!modalState) : null}/>
-      </PortalContext.Provider>
-      <PortalContext.Provider value={setMouseInBlack} >
-        <GeneralSearchBar isVisible={searchBarState} setIsVisible={() => mouseInBlack ? setSearchBarState(!searchBarState) : null}/>
-      </PortalContext.Provider>
     </div>
   );
 };

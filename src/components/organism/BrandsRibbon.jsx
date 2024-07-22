@@ -1,5 +1,7 @@
 import { useState } from "react";
+// Atoms
 import LogosRibbonSVG from "../atom/SvgLogosRibbon";
+// Styles
 import "../../styles/_blue-ribbon.css";
 
 export const BrandsRibbon = () => {

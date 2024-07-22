@@ -1,4 +1,6 @@
-export const SearchIcon = ({iconFill="#fff"}) => {
+import PropTypes from "prop-types";
+
+export const SearchIcon = ({ iconFill = "#fff" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -21,4 +23,8 @@ export const SearchIcon = ({iconFill="#fff"}) => {
       </g>
     </svg>
   );
+};
+
+SearchIcon.propTypes = {
+  iconFill: PropTypes.string,
 };

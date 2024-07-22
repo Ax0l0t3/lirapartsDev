@@ -5,12 +5,12 @@ import "../../styles/_portal-style.css";
 export const PortalComponent = ({
   portalChildren,
   isVisible = false,
-  setIsVisible = Function.prototype
+  setIsVisible = Function.prototype,
 }) => {
   return (
     isVisible &&
     createPortal(
-      <div className="portal-style" onClick={setIsVisible} >
+      <div className="portal-style" onClick={setIsVisible}>
         {portalChildren}
       </div>,
       document.getElementById("root"),

@@ -1,33 +1,30 @@
-import { useState } from "react";
+import { useContext } from "react";
 import PropTypes from "prop-types";
 import { DropDownEntry } from "../atom/DdlEntry";
-import { PortalComponent } from "./PortalComponent";
 import "../../styles/_dropdown-menu.css";
-import { DemoModalContent } from "../../utils/DemoModalContent";
+import { PortalContext } from "../../App";
 
 export const DropDownMenu = ({
   entryOptions,
   isVisible,
   setVisibility = Function.prototype,
 }) => {
-  const [modalState, setModalState] = useState(false);
+  const { setShowPortal, setPortalContent } = useContext(PortalContext);
+  const handleLinkClick = () => {
+    setPortalContent("Demo");
+    setShowPortal(true);
+    setVisibility(false);
+  };
+
   return (
     <div className={isVisible ? "dd-visible" : "dd-hidden"}>
       {entryOptions.map((entry, id) => (
         <DropDownEntry
           key={id}
           optionText={entry}
-          entryClick={() => {
-            setModalState(!modalState);
-            setVisibility(!isVisible);
-          }}
+          entryClick={handleLinkClick}
         />
       ))}
-      <PortalComponent
-        isVisible={modalState}
-        setIsVisible={() => setModalState(false)}
-        portalChildren={<DemoModalContent />}
-      />
     </div>
   );
 };

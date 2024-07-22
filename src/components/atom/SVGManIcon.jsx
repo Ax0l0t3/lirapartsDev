@@ -1,4 +1,3 @@
-
 export const ManIcon = () => {
   return (
     <svg

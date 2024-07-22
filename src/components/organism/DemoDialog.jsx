@@ -1,6 +1,6 @@
 import { DemoModalContent } from "../../utils/DemoModalContent";
 import { PortalComponent } from "../molecule/PortalComponent";
-import "../../styles/_portal-style.css";
+import PropTypes from "prop-types";
 
 export const DemoDialog = ({
   isVisible,
@@ -8,9 +8,13 @@ export const DemoDialog = ({
 }) => {
   return (
     <PortalComponent
-        isVisible={isVisible}
-        setIsVisible={setIsVisible}
-        portalChildren={<DemoModalContent />}
-      />
+      isVisible={isVisible}
+      portalChildren={<DemoModalContent />}
+      setIsVisible={setIsVisible}
+    />
   );
+};
+DemoDialog.propTypes = {
+  isVisible: PropTypes.bool.isRequired,
+  setIsVisible: PropTypes.func,
 };
