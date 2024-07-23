@@ -17,10 +17,11 @@
   position: absolute;
   right: 1rem;
   width: 50%;
+  animation: slide-in 500ms;
 }
 
 .search-container input:focus-visible {
- outline: none;
+  outline: none;
 }
 
 .search-footer {
@@ -50,3 +51,14 @@
 .close-form:hover {
   transform: rotate(180deg);
 }
+ @keyframes slide-in {
+  0%{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+ }

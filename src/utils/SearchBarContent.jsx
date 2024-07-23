@@ -17,29 +17,20 @@ export const SearchBarContent = ({
   portalClose = Function.prototype,
 }) => {
   const [displayProducts, setDisplayProducts] = useState([]);
+  const [inputText, setInputText] = useState("");
   const handleInputChange = (e) => {
-    console.log("Enters change");
-    const newDisplayProducts = [];
     const lowerCaseInputText = e.target.value.toLowerCase();
-    console.log("Before");
-    console.log(newDisplayProducts);
-    miniDataBase.forEach( imageObject => {
-      if ( imageObject.name?.toLowerCase().includes(lowerCaseInputText) ){
-        console.log(`${imageObject.name} contains ${lowerCaseInputText}`);
-        newDisplayProducts.push(imageObject);
-      } else {
-        if ( imageObject.brand?.toLowerCase().includes(lowerCaseInputText) ){
-          console.log(`${imageObject.brand} contains ${lowerCaseInputText}`);
-          newDisplayProducts.push(imageObject);
-        }
-      }
-      console.log("During");
-      console.log(newDisplayProducts);
+    
+    const filteredProducts = miniDataBase.filter((imageObject) => {
+      return (
+        imageObject.name?.toLowerCase().includes(lowerCaseInputText) ||
+        imageObject.brand?.toLowerCase().includes(lowerCaseInputText)
+      );
     });
-    console.log("After");
-    console.log(newDisplayProducts);
-    setDisplayProducts(newDisplayProducts);
+    setInputText(e.target.value);
+    setDisplayProducts(filteredProducts);
   };
+  
 
   return (
     <div
@@ -66,17 +57,22 @@ export const SearchBarContent = ({
         </form>
       </div>
       <SimpleList listStyle="m-8 mt-4 h-[50%]" listTitle="Productos">
-        <ul>
-          {displayProducts.map((imageObject) => (
-            <li key={imageObject.imageId} className="h-20 hover:bg-[#e9e9ffff]">
-              <ProductLi
-                productImage={imageObject.url}
-                productName={imageObject.name}
-                productBrand={imageObject.brand}
-              />
-            </li>
-          ))}
-        </ul>
+        {displayProducts.length > 0 && inputText
+          ? (
+            <ul>
+              {displayProducts.map((imageObject) => (
+                <li key={imageObject.imageId} className="h-20 hover:bg-[#e9e9ffff]">
+                  <ProductLi
+                    productImage={imageObject.url}
+                    productName={imageObject.name}
+                    productBrand={imageObject.brand}
+                  />
+                </li>
+              ))}
+            </ul>
+        ):
+          <p>No Products</p>
+          }
       </SimpleList>
       <div className="search-footer">
         <button type="button">View More</button>
