@@ -2,7 +2,7 @@
 import { MouseMove } from "../atom/SvgMouseMove";
 import { BoxTick } from "../atom/SvgBoxTick";
 import { MiniPackage } from "../atom/SvgMiniPackage";
-import { SvgCartIcon } from "../atom/SvgCartIcon";
+import { CartIcon } from "../atom/SvgCartIcon";
 // Styles
 import "../../styles/_buying-steps.css";
 
@@ -41,7 +41,7 @@ export const BuyingStripe = () => {
     },
     {
       type: "answer",
-      component: <SvgCartIcon />,
+      component: <CartIcon />,
       description:
         "Revisa todos tus productos seleccionados en tu carrito de compras",
     },
@@ -87,6 +87,7 @@ export const BuyingStripe = () => {
               key={id}
               className={content.type === "answer" ? "msg-box-1" : "msg-box-2"}
             >
+              {content?.component}
               <p className="mx-4">{content.description}</p>
               <p className="self-end text-[0.6rem] lg:text-[0.8rem] mt-[0.6rem] mr-[0.4rem]">
                 {getMessageTime()}

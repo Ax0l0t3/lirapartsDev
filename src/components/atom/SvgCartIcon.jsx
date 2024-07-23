@@ -1,15 +1,15 @@
-export const SvgCartIcon = () => {
+export const CartIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="52"
-      height="52"
+      width="30"
+      height="30"
       version="1.1"
       viewBox="0 0 13.758 13.758"
     >
       <g>
         <path
-          fill="#873b1f"
+          fill="#4b80c9ff"
           strokeLinecap="round"
           strokeLinejoin="bevel"
           strokeWidth="0.345"
