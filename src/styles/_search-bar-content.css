@@ -19,6 +19,10 @@
   width: 50%;
 }
 
+.search-container input:focus-visible {
+ outline: none;
+}
+
 .search-footer {
   align-items: center;
   background-image: linear-gradient(to top, black, #00000000);

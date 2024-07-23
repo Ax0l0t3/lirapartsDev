@@ -1,0 +1,72 @@
+[
+  {
+    "imageId": 1,
+    "url": "./images/stone1.png",
+    "altName": "Stone 1",
+    "name": "La madera",
+    "brand": "Gotoh"
+  },
+  {
+    "imageId": 2,
+    "url": "./images/stone2.png",
+    "altName": "Stone 2",
+    "name": "Junta con",
+    "brand": "Dunlop"
+  },
+  {
+    "imageId": 3,
+    "url": "./images/stone3.png",
+    "altName": "Stone 3",
+    "name": "El Cuello",
+    "brand": "Fender"
+  },
+  {
+    "imageId": 4,
+    "url": "./images/stone4.png",
+    "altName": "Stone 4",
+    "name": "Encima de",
+    "brand": "Ibanez"
+  },
+  {
+    "imageId": 5,
+    "url": "./images/stone5.png",
+    "altName": "Stone 5",
+    "name": "Las montañas",
+    "brand": "Epiphone"
+  },
+  {
+    "imageId": 6,
+    "url": "./images/stone6.png",
+    "altName": "Stone 6",
+    "name": "Nevadas atrás",
+    "brand": "Tarantula"
+  },
+  {
+    "imageId": 7,
+    "url": "./images/stone7.png",
+    "altName": "Stone 7",
+    "name": "De Nebraska",
+    "brand": "Kramer"
+  },
+  {
+    "imageId": 8,
+    "url": "./images/stone8.png",
+    "altName": "Stone 8",
+    "name": "Y Hawaii",
+    "brand": "Gibson"
+  },
+  {
+    "imageId": 9,
+    "url": "./images/stone9.png",
+    "altName": "Stone 9",
+    "name": "Tai chi",
+    "brand": "Squier"
+  },
+  {
+    "imageId": 10,
+    "url": "./images/stone10.png",
+    "altName": "Stone 10",
+    "name": "Eto kot Tanya",
+    "brand": "Perloide"
+  }
+]

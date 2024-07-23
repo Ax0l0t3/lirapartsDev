@@ -1,3 +1,4 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 // Atoms
 import { CloseIcon } from "../components/atom/SVGCloseIcon";
@@ -5,6 +6,8 @@ import { ProductLi } from "../components/atom/ProductLi";
 import { SearchIcon } from "../components/atom/SVGSearchIcon";
 // Molecules
 import { SimpleList } from "../components/molecule/SimpleList";
+// Utils
+import miniDataBase from "../utils/images.json";
 // Styles
 import "../styles/_search-bar-content.css";
 
@@ -13,16 +16,30 @@ export const SearchBarContent = ({
   mouseLeave = Function.prototype,
   portalClose = Function.prototype,
 }) => {
-  const productImages = [
-    "./images/stone1.png",
-    "./images/stone2.png",
-    "./images/stone3.png",
-    "./images/stone4.png",
-    "./images/stone5.png",
-    "./images/stone6.png",
-    "./images/stone7.png",
-    "./images/stone8.png",
-  ];
+  const [displayProducts, setDisplayProducts] = useState([]);
+  const handleInputChange = (e) => {
+    console.log("Enters change");
+    const newDisplayProducts = [];
+    const lowerCaseInputText = e.target.value.toLowerCase();
+    console.log("Before");
+    console.log(newDisplayProducts);
+    miniDataBase.forEach( imageObject => {
+      if ( imageObject.name?.toLowerCase().includes(lowerCaseInputText) ){
+        console.log(`${imageObject.name} contains ${lowerCaseInputText}`);
+        newDisplayProducts.push(imageObject);
+      } else {
+        if ( imageObject.brand?.toLowerCase().includes(lowerCaseInputText) ){
+          console.log(`${imageObject.brand} contains ${lowerCaseInputText}`);
+          newDisplayProducts.push(imageObject);
+        }
+      }
+      console.log("During");
+      console.log(newDisplayProducts);
+    });
+    console.log("After");
+    console.log(newDisplayProducts);
+    setDisplayProducts(newDisplayProducts);
+  };
 
   return (
     <div
@@ -39,14 +56,24 @@ export const SearchBarContent = ({
       <div>
         <form className="search-form">
           <SearchIcon iconFill="black" />
-          <input className="m-4" type="text" placeholder="Type to search" />
+          <input
+            className="m-4"
+            type="text"
+            placeholder="Producto o Marca"
+            autoFocus
+            onChange={(e) => handleInputChange(e)}
+          />
         </form>
       </div>
       <SimpleList listStyle="m-8 mt-4 h-[50%]" listTitle="Productos">
         <ul>
-          {productImages.map((image, id) => (
-            <li key={id} className="h-20 hover:bg-[#e9e9ffff]">
-              <ProductLi productImage={image} />
+          {displayProducts.map((imageObject) => (
+            <li key={imageObject.imageId} className="h-20 hover:bg-[#e9e9ffff]">
+              <ProductLi
+                productImage={imageObject.url}
+                productName={imageObject.name}
+                productBrand={imageObject.brand}
+              />
             </li>
           ))}
         </ul>
