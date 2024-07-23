@@ -20,7 +20,6 @@ export const SearchBarContent = ({
   const [inputText, setInputText] = useState("");
   const handleInputChange = (e) => {
     const lowerCaseInputText = e.target.value.toLowerCase();
-    
     const filteredProducts = miniDataBase.filter((imageObject) => {
       return (
         imageObject.name?.toLowerCase().includes(lowerCaseInputText) ||
@@ -30,7 +29,6 @@ export const SearchBarContent = ({
     setInputText(e.target.value);
     setDisplayProducts(filteredProducts);
   };
-  
 
   return (
     <div
@@ -38,8 +36,8 @@ export const SearchBarContent = ({
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
     >
-      <div className="flex m-8 mb-4">
-        <p className="text-2xl">Busqueda</p>
+      <div className="flex m-4 mb-2 lg:m-8 lg:mb-4">
+        <p className="text-xl lg:text-2xl">Busqueda</p>
         <div className="close-form h-fit" onClick={portalClose}>
           <CloseIcon />
         </div>
@@ -56,24 +54,29 @@ export const SearchBarContent = ({
           />
         </form>
       </div>
-      <SimpleList listStyle="m-8 mt-4 h-[50%]" listTitle="Productos">
-        {displayProducts.length > 0 && inputText
-          ? (
-            <ul>
-              {displayProducts.map((imageObject) => (
-                <li key={imageObject.imageId} className="h-20 hover:bg-[#e9e9ffff]">
-                  <ProductLi
-                    productImage={imageObject.url}
-                    productName={imageObject.name}
-                    productBrand={imageObject.brand}
-                    productPrice={imageObject.price}
-                  />
-                </li>
-              ))}
-            </ul>
-        ):
+      <SimpleList
+        listStyle="m-4 mt-2 lg:m-8 lg:mt-4 h-[40%] lg:h-[50%]"
+        listTitle="Productos"
+      >
+        {displayProducts.length > 0 && inputText ? (
+          <ul>
+            {displayProducts.map((imageObject) => (
+              <li
+                key={imageObject.imageId}
+                className="h-20 hover:bg-[#e9e9ffff]"
+              >
+                <ProductLi
+                  productImage={imageObject.url}
+                  productName={imageObject.name}
+                  productBrand={imageObject.brand}
+                  productPrice={imageObject.price}
+                />
+              </li>
+            ))}
+          </ul>
+        ) : (
           <p className="text-2xl text-center">Sin coincidencias</p>
-          }
+        )}
       </SimpleList>
       <div className="search-footer">
         <button type="button">View More</button>

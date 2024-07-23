@@ -3,7 +3,7 @@ export const ProductLi = ({
   productImage,
   productName = "Nombre de parte",
   productBrand = "Marca",
-  productPrice = 0
+  productPrice = 0,
 }) => {
   return (
     <div className="flex h-full">
@@ -21,4 +21,5 @@ ProductLi.propTypes = {
   productImage: PropTypes.string,
   productName: PropTypes.string,
   productBrand: PropTypes.string,
+  productPrice: PropTypes.number,
 };
