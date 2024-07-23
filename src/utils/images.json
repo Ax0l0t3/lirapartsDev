@@ -4,69 +4,79 @@
     "url": "./images/stone1.png",
     "altName": "Stone 1",
     "name": "La madera",
-    "brand": "Gotoh"
+    "brand": "Gotoh",
+    "price": 740
   },
   {
     "imageId": 2,
     "url": "./images/stone2.png",
     "altName": "Stone 2",
     "name": "Junta con",
-    "brand": "Dunlop"
+    "brand": "Dunlop",
+    "price": 860
   },
   {
     "imageId": 3,
     "url": "./images/stone3.png",
     "altName": "Stone 3",
     "name": "El Cuello",
-    "brand": "Fender"
+    "brand": "Fender",
+    "price": 1860
   },
   {
     "imageId": 4,
     "url": "./images/stone4.png",
     "altName": "Stone 4",
     "name": "Encima de",
-    "brand": "Ibanez"
+    "brand": "Ibanez",
+    "price": 160
   },
   {
     "imageId": 5,
     "url": "./images/stone5.png",
     "altName": "Stone 5",
     "name": "Las montañas",
-    "brand": "Epiphone"
+    "brand": "Epiphone",
+    "price": 260
   },
   {
     "imageId": 6,
     "url": "./images/stone6.png",
     "altName": "Stone 6",
     "name": "Nevadas atrás",
-    "brand": "Tarantula"
+    "brand": "Tarantula",
+    "price": 4360
   },
   {
     "imageId": 7,
     "url": "./images/stone7.png",
     "altName": "Stone 7",
     "name": "De Nebraska",
-    "brand": "Kramer"
+    "brand": "Kramer",
+    "price": 1090
   },
   {
     "imageId": 8,
     "url": "./images/stone8.png",
     "altName": "Stone 8",
     "name": "Y Hawaii",
-    "brand": "Gibson"
+    "brand": "Gibson",
+    "price": 560
   },
   {
     "imageId": 9,
     "url": "./images/stone9.png",
     "altName": "Stone 9",
     "name": "Tai chi",
-    "brand": "Squier"
+    "brand": "Squier",
+    "price": 320
   },
   {
     "imageId": 10,
     "url": "./images/stone10.png",
     "altName": "Stone 10",
     "name": "Eto kot Tanya",
-    "brand": "Perloide"
+    "brand": "Perloide",
+    "price": 288
   }
 ]

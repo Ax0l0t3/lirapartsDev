@@ -3,6 +3,7 @@ export const ProductLi = ({
   productImage,
   productName = "Nombre de parte",
   productBrand = "Marca",
+  productPrice = 0
 }) => {
   return (
     <div className="flex h-full">
@@ -11,7 +12,7 @@ export const ProductLi = ({
         <p>{productName}</p>
         <p className="text-[#808080ff]">{productBrand}</p>
       </div>
-      <p className="ml-auto">$300.00 MXN</p>
+      <p className="ml-auto">${productPrice} MXN</p>
     </div>
   );
 };

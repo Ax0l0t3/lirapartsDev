@@ -66,12 +66,13 @@ export const SearchBarContent = ({
                     productImage={imageObject.url}
                     productName={imageObject.name}
                     productBrand={imageObject.brand}
+                    productPrice={imageObject.price}
                   />
                 </li>
               ))}
             </ul>
         ):
-          <p>No Products</p>
+          <p className="text-2xl text-center">Sin coincidencias</p>
           }
       </SimpleList>
       <div className="search-footer">
