@@ -18,6 +18,7 @@ export const SearchBarContent = ({
 }) => {
   const [displayProducts, setDisplayProducts] = useState([]);
   const [inputText, setInputText] = useState("");
+  const [invisible, setInvisible] = useState(true);
   const handleInputChange = (e) => {
     const lowerCaseInputText = e.target.value.toLowerCase();
     const filteredProducts = miniDataBase.filter((imageObject) => {
@@ -30,15 +31,22 @@ export const SearchBarContent = ({
     setDisplayProducts(filteredProducts);
   };
 
+  const handleClose = () => {
+    setInvisible(false);
+    setTimeout(() => {
+      portalClose();
+    }, 500);
+  };
+
   return (
     <div
-      className="search-container"
+      className={invisible ? "search-container" : "search-container-hidden"}
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
     >
       <div className="flex m-4 mb-2 lg:m-8 lg:mb-4">
         <p className="text-xl lg:text-2xl">Busqueda</p>
-        <div className="close-form h-fit" onClick={portalClose}>
+        <div className="close-form h-fit" onClick={handleClose}>
           <CloseIcon />
         </div>
       </div>

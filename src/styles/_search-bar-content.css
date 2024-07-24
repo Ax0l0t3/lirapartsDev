@@ -20,6 +20,21 @@
   animation: slide-in 500ms;
 }
 
+.search-container-hidden {
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  right: 1rem;
+  width: 50%;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 500ms;
+}
+
 .search-container input:focus-visible {
   outline: none;
 }
