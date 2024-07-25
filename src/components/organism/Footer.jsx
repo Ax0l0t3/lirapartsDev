@@ -26,7 +26,7 @@ export const Footer = () => {
         {aboutUsLabels.map((element, id) => (
           <a
             key={id}
-            className="hover:text-[#2e99ceff]"
+            className="cursor-pointer hover:text-[#2e99ceff]"
             onClick={handleLinkClick}
           >
             {element}
@@ -38,7 +38,7 @@ export const Footer = () => {
         {aboutMeLabels.map((element, id) => (
           <a
             key={id}
-            className="hover:text-[#2e99ceff]"
+            className="cursor-pointer hover:text-[#2e99ceff]"
             onClick={handleLinkClick}
           >
             {element}

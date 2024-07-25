@@ -88,7 +88,7 @@ export const BuyingStripe = () => {
               className={content.type === "answer" ? "msg-box-1" : "msg-box-2"}
             >
               {content?.component}
-              <p className="mx-4">{content.description}</p>
+              <p className="mx-4 cursor-default">{content.description}</p>
               <p className="self-end text-[0.6rem] lg:text-[0.8rem] mt-[0.6rem] mr-[0.4rem]">
                 {getMessageTime()}
               </p>
